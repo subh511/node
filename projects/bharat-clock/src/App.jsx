@@ -4,9 +4,9 @@ import AllComponents from "./components/AllComponents";
 function App() {
 
   return (
-    <center>
+    <div>
     <AllComponents/>
-    </center>
+    </div>
   );
 }
 
