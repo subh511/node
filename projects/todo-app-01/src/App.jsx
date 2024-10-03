@@ -2,13 +2,14 @@ import AppName from "./components/AppName";
 import DeleteItems from "./components/DeleteItems";
 import SearchComponent from "./components/SearchComponent";
 
+import "./App.css";
+
 function App() {
   return (
     <center>
-    <AppName/>
-      <div className="container text-center">
+      <div className="container">
+      <AppName/>
       <SearchComponent/>
-      <br/>
       <DeleteItems/>
       </div>
     </center>
