@@ -1,9 +1,7 @@
 
 
 
-const ErrorMessage = () => {
-
-  let foodItems = ["Dal", "Roti", "Salad", "GreenVegetable", "Milk", "Ghee"];
+const ErrorMessage = ({foodItems}) => {
 
   return (
     <div>
