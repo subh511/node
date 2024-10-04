@@ -1,7 +1,6 @@
-
 function Items({foodItems}){
 
-  return <li className="list-group-item kg-item">
+  return <li className="list-group-item">
   {foodItems}
 </li>
 }

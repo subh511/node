@@ -1,8 +1,6 @@
 import ErrorMessage from "./components/ErrorMsg";
 import FoodItems from "./components/FoodItems";
 
-//import "./App.css";
-
 function App() {
   // let foodItems = [];
   let foodItems = ["Sabzi", "Roti", "Salad", "GreenVegetable", "Milk", "Ghee"];
