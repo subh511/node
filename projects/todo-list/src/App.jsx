@@ -2,15 +2,26 @@ import AppName from "./components/AppName";
 import SearchComponent from "./components/SearchComponent";
 
 import "./App.css";
-import TodoItem from "./components/TodoItem";
+import TodoItems from "./components/TodoItems";
 
 function App() {
+
+  const todoItems= [{
+    name:"Buy Milk",
+    date: "4/10/23"
+  },{
+    name: "Go to college",
+    date: "4/10/23"
+  },{
+    name:"Go To Youtube",
+    date: "Right Now"
+  }]
   return (
     <center>
       <div className="container">
       <AppName/>
       <SearchComponent/>
-      <TodoItem todoDate="4/10/2023" todoName="Buy Milk"/>
+      <TodoItems todoItems={todoItems}/>
       </div>
     </center>
   );
