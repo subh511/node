@@ -17,6 +17,7 @@ const ButtonContainer = () => {
     "=",
     "9",
     "0",
+    "*",
     ".",
   ];
   return (

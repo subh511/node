@@ -1,5 +1,6 @@
 import styles from "./Display.module.css";
 
+
 function Display(){
   return(
     <div>
