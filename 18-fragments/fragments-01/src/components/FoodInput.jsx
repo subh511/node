@@ -4,7 +4,7 @@ const FoodInput = ({handleKeyDown}) =>{
 
 return(
   <div>
-  <input type="text" placeholder="enter fooditem here" className={styles.foodInput} onKeyDown={handleKeyDown}/>
+  <input type="text" placeholder="enter food-item" className={styles.foodInput} onKeyDown={handleKeyDown}/>
   </div>
 )
 }

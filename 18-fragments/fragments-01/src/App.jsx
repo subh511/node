@@ -6,12 +6,12 @@ import FoodItems from "./components/FoodItems";
 import {useState} from "react";
 
 function App() {
-  let [foodItems,setFoodItems] = useState(["Salad", "Roti","GreenVegetable"])
+  let [foodItems,setFoodItems] = useState([])
 
   const onKeyDown = (event) =>{
     if(event.key === 'Enter'){
       let newFooditem = event.target.value;
-     // let newItems = [...foodItems,newFooditem];
+      event.target.value="";
       setFoodItems([...foodItems,newFooditem]);
     }
   }
@@ -19,8 +19,8 @@ function App() {
   return (
     <Container>
       <h1>Healthy Foods</h1>
-      <ErrorMessage foodItems={foodItems}/>
       <FoodInput handleKeyDown={onKeyDown}/>
+      <ErrorMessage foodItems={foodItems}/>
       <FoodItems foodItems={foodItems}/>
     </Container>
   );

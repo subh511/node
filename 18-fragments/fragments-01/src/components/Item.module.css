@@ -1,0 +1,7 @@
+.button{
+  float: right;
+  color: black;
+  border-radius: 3px;
+  background-color: rgb(255, 213, 0);
+  border-color: white;
+}
