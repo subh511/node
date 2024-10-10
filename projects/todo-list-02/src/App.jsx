@@ -3,25 +3,28 @@ import SearchComponent from "./components/SearchComponent";
 
 import "./App.css";
 import TodoItems from "./components/TodoItems";
+import { useState } from "react";
 
 function App() {
+  const [todoItems, setTodoItems] = useState([]);
 
-  const todoItems= [{
-    name:"Buy Milk",
-    date: "4/10/23"
-  },{
-    name: "Go to college",
-    date: "4/10/23"
-  },{
-    name:"Go To Youtube",
-    date: "Right Now"
-  }]
+  const handleNewItem = (itemName, itemDueDate) => {
+    const newTodoItems = [
+      ...todoItems,
+      {
+        name: itemName,
+        date: itemDueDate,
+      },
+    ];
+    setTodoItems(newTodoItems);
+  };
+
   return (
     <center>
       <div className="container">
-      <AppName/>
-      <SearchComponent/>
-      <TodoItems todoItems={todoItems}/>
+        <AppName />
+        <SearchComponent handleNewItem={handleNewItem} />
+        <TodoItems todoItems={todoItems} />
       </div>
     </center>
   );
