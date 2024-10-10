@@ -1,12 +1,11 @@
 import styles from "./Display.module.css";
 
-
-function Display(){
-  return(
+function Display({ calValue }) {
+  return (
     <div>
-    <input type="text" className={styles.display}/>
+      <input type="text" className={styles.display} value={calValue} readOnly/>
     </div>
-  )
+  );
 }
 
 export default Display;

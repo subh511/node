@@ -1,6 +1,6 @@
 import styles from "./ButtonContainer.module.css";
 
-const ButtonContainer = () => {
+const ButtonContainer = ({onButtonClick}) => {
   let buttonNames = [
     "C",
     "1",
@@ -23,8 +23,7 @@ const ButtonContainer = () => {
   return (
     <div className={styles.button}>
       {buttonNames.map((btn) => (
-        // eslint-disable-next-line react/jsx-key
-        <button className={styles.buttons}>{btn}</button>
+        <button className={styles.buttons} key={btn} onClick={()=>onButtonClick(btn)}>{btn}</button>
       ))}
     </div>
   );
