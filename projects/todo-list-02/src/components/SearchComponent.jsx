@@ -1,5 +1,5 @@
 import {useState} from "react";
-
+import { MdAddCircleOutline } from "react-icons/md";
 function SearchComponent({handleNewItem}) {
 
   const [todoName,setTodoName] = useState("");
@@ -31,7 +31,7 @@ function SearchComponent({handleNewItem}) {
         </div>
         <div className="col-2">
           <button type="button" className="btn btn-success" onClick={handleAddButtonClicked}>
-            Add
+          <MdAddCircleOutline />
           </button>
         </div>
       </div>
