@@ -20,13 +20,21 @@ function App() {
     setTodoItems(newTodoItems);
   };
 
+  const handleDeleteItems = (todoItemName) => {
+    const newTodoItems = todoItems.filter((item) => item.name !== todoItemName);
+    setTodoItems(newTodoItems);
+  };
+
   return (
     <center>
       <div className="container">
         <AppName />
         <SearchComponent handleNewItem={handleNewItem} />
-        {todoItems.length === 0 && <WelcomeMessage/>}
-        <TodoItems todoItems={todoItems} />
+        {todoItems.length === 0 && <WelcomeMessage />}
+        <TodoItems
+          handleDeleteItems={handleDeleteItems}
+          todoItems={todoItems}
+        />
       </div>
     </center>
   );
